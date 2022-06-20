@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.4PICTURE1WORD" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="GameScreenTextStyle">
+        <item name="background" >@drawable/button_gray_selector</item>
+        <item name="fontFamily"> @font/medium_ubuntu </item>
+    </style>
+    <style name="SettingsTextStyle">
+        <item name="android:textSize"> 25sp </item>
+        <item name="android:fontFamily">@font/medium_ubuntu</item>
+        <item name="android:textColor"> @color/white </item>
+    </style>
+</resources>

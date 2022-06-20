@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.soul.mygame4pic.fragments.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_gameFragment2"
+            app:destination="@id/gameFragment2" />
+        <action
+            android:id="@+id/action_menuFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment2"
+        android:name="com.soul.mygame4pic.fragments.GameFragment"
+        android:label="GameFragment" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.soul.mygame4pic.fragments.InfoFragment"
+        android:label="InfoFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.soul.mygame4pic.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>

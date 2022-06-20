@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_darkgray_selector"
+        android:elevation="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintBottom_toBottomOf="@id/action_bar"
+            app:layout_constraintEnd_toStartOf="@id/btnInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="@id/btnSettings"
+            app:layout_constraintStart_toEndOf="@id/btnSettings"
+            app:layout_constraintTop_toTopOf="@id/btnSettings"
+            app:tint="@color/white" />
+
+        <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:gravity="center">-->
+
+        <!--            <ImageView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:src="@drawable/ic_level_img"-->
+        <!--                app:tint="@color/white" />-->
+
+        <!--            <Space-->
+        <!--                android:layout_width="10dp"-->
+        <!--                android:layout_height="wrap_content" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/level"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="1"-->
+        <!--                android:textColor="@android:color/white"-->
+        <!--                android:textSize="30sp" />-->
+
+        <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_darkgray_selector"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/action_bar"
+            app:layout_constraintEnd_toEndOf="@id/action_bar"
+            app:layout_constraintTop_toTopOf="@id/action_bar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_coins"
+                    android:visibility="visible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="coin_animation.json"
+                    app:lottie_loop="true"
+                    app:lottie_speed="1" />
+
+                <TextView
+                    android:id="@+id/coin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="4dp"
+                    android:text="404"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_bg" />
+
+    <LinearLayout
+        android:id="@+id/imagesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/imagesLayout"
+        app:layout_constraintEnd_toEndOf="@id/imagesLayout"
+        app:layout_constraintStart_toStartOf="@id/imagesLayout">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/wide" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/counter_tv"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_level"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/imagesList"
+        app:layout_constraintEnd_toEndOf="@id/imagesList"
+        app:layout_constraintStart_toStartOf="@id/imagesList"
+        app:layout_constraintTop_toTopOf="@id/imagesList">
+
+        <TextView
+            android:id="@+id/last_que"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/imagesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlay"
+            style="@style/MainScreenBtnTextStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_main_selector"
+            android:padding="20dp"
+            android:text="@string/play"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
