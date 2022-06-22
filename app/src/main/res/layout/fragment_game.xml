@@ -350,10 +350,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
-            android:gravity="center"
-            android:padding="3dp"
             android:background="@drawable/button_green_selector"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
 
             <ImageView
                 android:id="@+id/btnHelp"
@@ -364,11 +364,11 @@
 
             <TextView
                 android:id="@+id/chance"
-                android:text="5"
-                android:textSize="20sp"
-                android:textColor="#FAE305"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="#FAE305"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
